@@ -27,23 +27,25 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 |email|string|null: false, unique: true|
 |encrypted_password|string|null: false|
 
 ### Association
 - has_many :users_groups
 - has_many :groups, through: :users_groups
+- has_many :messages
 
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|strung|null: false|
+|name|strung|null: false|
 
 ### Association
 - has_many :users_groups
 - has_many :users, through: :users_groups
+- has_many :messages
 
 ## users_groupsテーブル
 |Column|Type|Options|
@@ -65,5 +67,5 @@ Things you may want to cover:
 |------|timestamps|null: false|
 
 ### Association
--
--
+- belong_to :user
+- belong_to :group
