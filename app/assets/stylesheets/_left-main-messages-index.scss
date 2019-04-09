@@ -1,0 +1,19 @@
+.left-main {
+  background-color: #2f3251;
+  height: calc(100vh - 126px);
+  width: 300px;
+}
+
+.left-main--group-name {
+  color: #fff;
+  font-size: 15px;
+  padding: 20px 20px 5px 20px;
+  font-weight: bold;
+}
+
+.left-main--new-word {
+  color: $w;
+  font-size: 11px;
+  padding: 0px 20px 40px 20px;
+  font-weight: bold;
+}

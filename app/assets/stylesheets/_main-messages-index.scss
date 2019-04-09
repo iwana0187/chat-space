@@ -1,0 +1,30 @@
+.main {
+  padding: 26px 40px 0 40px;
+  margin-top: 102px;
+  overflow: scroll;
+  height: calc(100vh - 201px);
+}
+
+.main--block {
+  padding: 20px 0;
+}
+
+.main--user-name {
+  font-size: 16px;
+  font-weight: bold;
+  font-color: #434A54;
+  display: flex;
+}
+
+.main--time {
+  margin-left: 10px;
+  font-color: #999;
+  font-size: 12px;
+}
+
+.main--comments {
+  margin-top: 10px;
+  font-size: 14px;
+  font-color: #434A54;
+}
+
