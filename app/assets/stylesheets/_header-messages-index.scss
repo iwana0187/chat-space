@@ -15,29 +15,29 @@
   position: fixed;
 }
 
-.header--block {
+.header__block {
   margin-top: 35px;
 }
 
-.header--group-name {
+.header__group-name {
   font-size: 20px;
 }
 
-.header--member {
+.header__member {
   margin-top: 15px;
   font-size: 12px;
   display: flex;
   color: #333;
 }
 
-.header--member-name {
+.header__member-name {
   display: flex;
   font-size: 12px;
   color: #999;
   margin-left: 10px;
 }
 
-.header--edit-group {
+.header__edit-group {
   border: 1px solid #38AEF0;
   height: 40px;
   line-height: 40px;

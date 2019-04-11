@@ -4,155 +4,58 @@
 .contents
   .left-contents
     .left-header
-      %p.left-header--user-name
+      %p.left-header__user-name
         iwana
-      %ul.left-header--user-menu
-        %li.side-header--user-edit
-          %a{:href => "/groups/new"}
-            %i.fa.fa-edit
-        %li.left-header--new-group
-          %a{:href => "/users/393/edit"}
-            %i.fa.fa-cog
+      %ul.left-header__user-menu
+        %li.side-header__user-edit
+          = link_to "", root_path
+          %i.fa.fa-edit
+        %li.left-header__new-group
+          = link_to "", root_path
+          %i.fa.fa-cog
 
     .left-main
-      %p.left-main--group-name
+      %p.left-main__group-name
         Sample
-      %p.left-main--new-word
+      %p.left-main__new-word
         Good by world!
   .main-contents
     .header
-      .header--block
-        %p.header--group-name
+      .header__block
+        %p.header__group-name
           Sample
-        %ul.header--member
+        %ul.header__member
           Member:
-          %li.header--member-name
+          %li.header__member-name
             iwana
       %a
-        .header--edit-group
+        .header__edit-group
           Edit
     .main
       .main-block
-        %ul.main--user-name
+        %ul.main__user-name
           iwana
-          %li.main--time
+          %li.main__time
             2016/09/21 06:16:55
-        .main--comments
+        .main__comments
           Hello world!
 
-      .main--block
-        %ul.main--user-name
+      .main__block
+        %ul.main__user-name
           neko
-          %li.main--time
+          %li.main__time
             2016/09/22 06:16:55
-        .main--comments
+        .main__comments
           Good by world!
 
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
-      .main--block
-        %ul.main--user-name
-          neko
-          %li.main--time
-            2016/09/22 06:16:55
-        .main--comments
-          Good by world!
+
     .footer
-    %form.footer--framwork
-      .footer--input-box
-        %input.footer--form-message{:type => "text"}
+    %form.footer__framwork
+      .footer__input-box
+        %input.footer__form-message{type: "text"}
         %label.fa.fa-image
-          %input#message_image.image-label__input{:type => "file"}
-      %input.footer--form-submit{type: 'submit', value: 'Send'}
+          %input#message_image.image-label__input{type: "file"}
+      %input.footer__form-submit{type: "submit",value: "Send"}
 
 
 

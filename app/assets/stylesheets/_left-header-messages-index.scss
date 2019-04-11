@@ -22,23 +22,23 @@ i {
   height: 102px;
 }
 
-.left-header--user-name {
+.left-header__user-name {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
 }
 
-.left-header--user-menu {
+.left-header__user-menu {
   display: flex;
 }
 
-.left-header--user-edit {
+.left-header__user-edit {
   display: list-item;
   text-align: -webkit-match-parent;
   margin-left: 0.3rem;
 }
 
-.left-header--new-group {
+.left-header__new-group {
   display: list-item;
   text-align: -webkit-match-parent;
   margin-left: 0.3rem;

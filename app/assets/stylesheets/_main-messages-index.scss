@@ -5,24 +5,24 @@
   height: calc(100vh - 201px);
 }
 
-.main--block {
+.main__block {
   padding: 20px 0;
 }
 
-.main--user-name {
+.main__user-name {
   font-size: 16px;
   font-weight: bold;
   font-color: #434A54;
   display: flex;
 }
 
-.main--time {
+.main__time {
   margin-left: 10px;
   font-color: #999;
   font-size: 12px;
 }
 
-.main--comments {
+.main__comments {
   margin-top: 10px;
   font-size: 14px;
   font-color: #434A54;

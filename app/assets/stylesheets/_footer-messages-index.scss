@@ -1,4 +1,4 @@
-.footer--framwork {
+.footer__framwork {
   width: calc(100vw - 300px);
   height: 75px;
   background-color: rgba(192,192,192,1);
@@ -6,13 +6,13 @@
   display: flex;
 }
 
-.footer--input-box {
+.footer__input-box {
   position: relative;
   width: 90%;
   background-color: $w;
 }
 
-.footer--form-message {
+.footer__form-message {
   width: 90%;
   padding: 0 40px 0 10px;
   height: 47px;
@@ -22,14 +22,14 @@
 
 
 
-.footer--image-icon {
+.footer__image-icon {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
 
-.footer--form-submit {
+.footer__form-submit {
   margin-left: 15px;
   padding: 0 30px;
   height: 50px;
