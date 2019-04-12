@@ -4,42 +4,40 @@
   background-color: rgba(192,192,192,1);
   padding: 12px 40px;
   display: flex;
-}
-
-.footer__input-box {
-  position: relative;
-  width: 90%;
-  background-color: $w;
-}
-
-.footer__form-message {
-  width: 90%;
-  padding: 0 40px 0 10px;
-  height: 47px;
-  color: #434a54;
-  border-style: none;
-}
-
-
-
-.footer__image-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-
-.footer__form-submit {
-  margin-left: 15px;
-  padding: 0 30px;
-  height: 50px;
-  width: 100px;
-  background-color: #38aef0;
-  color: $w;
-}
-
-.image-label__input{
-  display: none;
+  &__input-box {
+    position: relative;
+    width: 90%;
+    background-color: $w;
+    &__form-message {
+      width: 90%;
+      padding: 0 40px 0 10px;
+      height: 47px;
+      color: #434a54;
+      border-style: none;
+      &__image-label__input{
+        display: none;
+      }
+    }
+  }
+  &__form-submit {
+    margin-left: 15px;
+    padding: 0 30px;
+    height: 50px;
+    width: 100px;
+    background-color: #38aef0;
+    color: $w;
+  }
 }
 
 
+
+
+// .image-label__input{
+//   display: none;
+// }
+
+// .footer__image-icon {
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+// }

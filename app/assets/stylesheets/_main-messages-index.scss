@@ -7,24 +7,20 @@
 
 .main__block {
   padding: 20px 0;
+  &__user-name {
+    font-size: 16px;
+    font-weight: bold;
+    font-color: #434A54;
+    display: flex;
+    &__time {
+      margin-left: 10px;
+      font-color: #999;
+      font-size: 12px;
+    }
+  }
+  &__comments {
+    margin-top: 10px;
+    font-size: 14px;
+    font-color: #434A54;
+  }
 }
-
-.main__user-name {
-  font-size: 16px;
-  font-weight: bold;
-  font-color: #434A54;
-  display: flex;
-}
-
-.main__time {
-  margin-left: 10px;
-  font-color: #999;
-  font-size: 12px;
-}
-
-.main__comments {
-  margin-top: 10px;
-  font-size: 14px;
-  font-color: #434A54;
-}
-
