@@ -1,0 +1,58 @@
+.top-header
+  %p.top-header__alert
+    ログインしました
+.contents
+  .left-contents
+    .left-contents__header
+      %p.left-contents__header__user-name
+        iwana
+      %ul.left-contents__header__user-menu
+        %li.left-contents__header__user-menu__user-edit
+          = link_to "", root_path
+          %i.fa.fa-edit
+        %li.left-contents__header__user-menu__new-group
+          = link_to "", root_path
+          %i.fa.fa-cog
+
+    .left-main
+      %p.left-main__group-name
+        Sample
+      %p.left-main__new-word
+        Good by world!
+  .main-contents
+    .main-contents__header
+      .main-contents__header__block
+        %p.main-contents__header__block__group-name
+          Sample
+        %ul.main-contents__header__block__member
+          Member:
+          %li.main-contents__header__block__member-name
+            iwana
+      %a
+        .main-contents__header__block__edit-group
+          Edit
+    .main
+      .main-block
+        %ul.main-block__user-name
+          iwana
+          %li.main-block__user-name__time
+            2016/09/21 06:16:55
+        .main-block__comments
+          Hello world!
+
+      .main__block
+        %ul.main-block__user-name
+          neko
+          %li.main-block__user-name__time
+            2016/09/22 06:16:55
+        .main-block__comments
+          Good by world!
+
+
+    .footer
+    %form.footer__framwork
+      .footer__framwork__input-box
+        %input.footer__framwork__input-box__form-message{type: "text"}
+        %label.fa.fa-image
+          %input#message_image.footer__framwork__input-box__form-message__image-label__input{type: "file"}
+      %input.footer__framwork__form-submit{type: "submit",value: "Send"}

@@ -1,0 +1,30 @@
+.footer__framwork {
+  width: calc(100vw - 300px);
+  height: 75px;
+  background-color: rgba(192,192,192,1);
+  padding: 12px 40px;
+  display: flex;
+  &__input-box {
+    position: relative;
+    width: 90%;
+    background-color: $w;
+    &__form-message {
+      width: 90%;
+      padding: 0 40px 0 10px;
+      height: 47px;
+      color: #434a54;
+      border-style: none;
+      &__image-label__input{
+        display: none;
+      }
+    }
+  }
+  &__form-submit {
+    margin-left: 15px;
+    padding: 0 30px;
+    height: 50px;
+    width: 100px;
+    background-color: #38aef0;
+    color: $w;
+  }
+}
