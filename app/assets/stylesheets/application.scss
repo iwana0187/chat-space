@@ -5,9 +5,14 @@
 
 
 /* messages index view files */
+@import "flash";
 @import "top-header-messages-index";
 @import "left-header-messages-index";
 @import "left-main-messages-index";
 @import "header-messages-index";
 @import "main-messages-index";
 @import "footer-messages-index";
+
+/* create function of chatspace */
+@import "user";
+@import "group";
