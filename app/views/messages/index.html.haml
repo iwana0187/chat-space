@@ -1,22 +1,19 @@
-.top-header
-  %p.top-header__alert
-    ログインしました
 .contents
   .left-contents
     .left-contents__header
       %p.left-contents__header__user-name
-        iwana
+        = current_user.name
       %ul.left-contents__header__user-menu
         %li.left-contents__header__user-menu__user-edit
-          = link_to "", root_path
-          %i.fa.fa-edit
+          = link_to new_group_path do
+            = fa_icon 'pencil-square-o', class: 'icon'
         %li.left-contents__header__user-menu__new-group
-          = link_to "", root_path
-          %i.fa.fa-cog
+          = link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'icon'
 
     .left-main
       %p.left-main__group-name
-        Sample
+        yamame
       %p.left-main__new-word
         Good by world!
   .main-contents
@@ -48,6 +45,7 @@
         .main-block__comments
           Good by world!
 
+      = render partial: "main-block"
 
     .footer
     %form.footer__framwork

@@ -24,6 +24,7 @@ Things you may want to cover:
 * ...
 
 ## usersテーブル
+<!-- モデルファイル名は、 userモデル -->
 
 |Column|Type|Options|
 |------|----|-------|
@@ -38,16 +39,19 @@ Things you may want to cover:
 
 
 ## groupsテーブル
+<!-- モデルファイル名は、 groupモデル -->
 |Column|Type|Options|
 |------|----|-------|
-|name|strung|null: false|
+|name|strung|null: false, unique: true;|
+<!-- unique: true;追加 -->
 
 ### Association
 - has_many :users_groups
 - has_many :users, through: :users_groups
 - has_many :messages
 
-## users_groupsテーブル
+## group_usersテーブル
+<!-- モデルファイル名は、 group_userモデル -->
 |Column|Type|Options|
 |------|----|-------|
 |user|references|foreign_key: true|
@@ -58,6 +62,7 @@ Things you may want to cover:
 - belongs_to :group
 
 ## messagesテーブル
+<!-- モデル名は、messageモデル -->
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|------|

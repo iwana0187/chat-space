@@ -55,3 +55,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "font-awesome-rails"
 gem 'haml-rails'
 gem 'erb2haml'
+
+gem 'devise'
+
+group :test do
+  gem 'rspec'
+end
+
+group :production do
+  gem 'rspec'
+end
+
+group :production do
+  gem 'unicorn'
+end
