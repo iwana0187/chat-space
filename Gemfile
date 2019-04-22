@@ -69,3 +69,6 @@ end
 group :production do
   gem 'unicorn'
 end
+
+gem 'carrierwave'
+gem 'mini_magick'
