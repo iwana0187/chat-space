@@ -30,23 +30,8 @@
           .main-contents__header__block__edit-group
             Edit
       .main
-        .main-block
-          %ul.main-block__user-name
-            iwana
-            %li.main-block__user-name__time
-              2016/09/21 06:16:55
-          .main-block__comments
-            Hello world!
-
-        .main__block
-          %ul.main-block__user-name
-            neko
-            %li.main-block__user-name__time
-              2016/09/22 06:16:55
-          .main-block__comments
-            Good by world!
-
         = render partial: 'message', collection: @messages
+
     .footer
       = form_for [@group, @message] do |f|
         .footer__framwork
