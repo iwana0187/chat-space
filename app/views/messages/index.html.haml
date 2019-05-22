@@ -1,37 +1,37 @@
 .contents
-  - current_user.groups.each do |group|
-    .left-contents
-      .left-contents__header
-        %p.left-contents__header__user-name
-          = current_user.name
-        %ul.left-contents__header__user-menu
-          %li.left-contents__header__user-menu__user-edit
-            = link_to new_group_path do
-              = fa_icon 'pencil-square-o', class: 'icon'
-          %li.left-contents__header__user-menu__new-group
-            = link_to edit_user_path(current_user) do
-              = fa_icon 'cog', class: 'icon'
+  .left-contents
+    = render 'shared/side_bar'
 
-      .left-main
-        %p.left-main__group-name
-          = group.name
-        %p.left-main__new-word
-          = group.show_last_message
-    .main-contents
-      .main-contents__header
-        .main-contents__header__block
-          %p.main-contents__header__block__group-name
-            = group.name
-          %ul.main-contents__header__block__member
-            Member:
-            %li.main-contents__header__block__member-name
-
-        %a
-          .main-contents__header__block__edit-group
+  .main-contents
+    .main-contents__header
+      .main-contents__header__block
+        %p.main-contents__header__block__group-name
+          = @group.name
+        %ul.main-contents__header__block__member
+          Member:
+          %li.main-contents__header__block__member-name
+      %a
+        .main-contents__header__block__edit-group
+          = link_to edit_group_path(@group.id) do
             Edit
-      .main
-        = render partial: 'message', collection: @messages
+    .main
+      .main-block
+        %ul.main-block__user-name
+          iwana
+          %li.main-block__user-name__time
+            2016/09/21 06:16:55
+        .main-block__comments
+          Hello world!
 
+      .main-block
+        %ul.main-block__user-name
+          neko
+          %li.main-block__user-name__time
+            2016/09/22 06:16:55
+        .main-block__comments
+          Good by world!
+
+      = render partial: 'message', collection: @messages
     .footer
       = form_for [@group, @message] do |f|
         .footer__framwork
