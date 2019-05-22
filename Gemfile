@@ -75,5 +75,6 @@ group :production do
   gem 'unicorn'
 end
 
+gem 'pry-rails'
 gem 'carrierwave'
 gem 'mini_magick'
