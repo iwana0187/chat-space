@@ -1,7 +1,4 @@
-
 class UsersController < ApplicationController
-
-
   def index
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").limit(20).where.not(name: current_user.name,)
     respond_to do |format|

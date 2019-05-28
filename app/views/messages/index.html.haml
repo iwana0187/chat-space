@@ -1,7 +1,6 @@
 .contents
   .left-contents
-    = render 'shared/side_bar'
-
+    =render 'shared/side_bar'
   .main-contents
     .main-contents__header
       .main-contents__header__block
@@ -17,24 +16,9 @@
         .main-contents__header__block__edit-group
           = link_to edit_group_path(@group.id) do
             Edit
-    .main
-      .main-block
-        %ul.main-block__user-name
-          iwana
-          %li.main-block__user-name__time
-            2016/09/21 06:16:55
-        .main-block__comments
-          Hello world!
+      .main
+        = render partial: 'message', collection: @messages
 
-      .main-block
-        %ul.main-block__user-name
-          neko
-          %li.main-block__user-name__time
-            2016/09/22 06:16:55
-        .main-block__comments
-          Good by world!
-
-      = render partial: 'message', collection: @messages
     .footer
       = form_for [@group, @message],html:{ class:"new_message" } do |f|
         .footer__framwork
