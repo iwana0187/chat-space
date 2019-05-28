@@ -29,17 +29,20 @@ $(document).on('turbolinks:load', function() {
       contentType: false
     })
     .done(function(data){
-      var html = buildHTML(data);
       console.log(data)
-      $('.main').append(html)
-      $('.textbox').val('')
-      $(".footer__framwork__form-submit").prop("disabled", false);
+      var html = buildHTML(data);
+      $(".main").append(html)
+      $(".footer__framwork__input-box__form-message").val('')
+      $(".footer__framwork__form-submit").prop('disabled', false);
     })
     .fail(function(){
       alert('失敗しました');
     })
   })
-  $('html,body').animate({scrollTop: 0}, 500, 'swing');
+
+  // $('document').ready(function(){
+  //   $(".main").animate({scrollTop:$('.footer__framwork')}, 500, 'swing');
+  // })
 
   var reloadMessages = function(message) {
     last_message_id = $("#blog")

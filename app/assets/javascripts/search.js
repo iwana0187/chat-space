@@ -21,7 +21,6 @@ $(function(){
     search_list.append(html);
   }
 
-
   $(document).on('click',".chat-group-user__btn--add", function(){
     addUser(this)
     $(this).parent().remove()
