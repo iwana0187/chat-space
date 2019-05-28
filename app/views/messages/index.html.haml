@@ -5,11 +5,14 @@
   .main-contents
     .main-contents__header
       .main-contents__header__block
-        %p.main-contents__header__block__group-name
+        %p.main-contents__header__block__group-name{"data-group_id": @group.id}
           = @group.name
         %ul.main-contents__header__block__member
           Member:
           %li.main-contents__header__block__member-name
+            - @group.users.each do |user|
+              %p
+                = user.name
       %a
         .main-contents__header__block__edit-group
           = link_to edit_group_path(@group.id) do
@@ -33,7 +36,7 @@
 
       = render partial: 'message', collection: @messages
     .footer
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message],html:{ class:"new_message" } do |f|
         .footer__framwork
           .footer__framwork__input-box
             = f.text_field :content,class: 'footer__framwork__input-box__form-message', placeholder: 'type a message'
