@@ -65,3 +65,4 @@ RSpec.configure do |config|
 end
 
 require 'capybara/rspec'
+
