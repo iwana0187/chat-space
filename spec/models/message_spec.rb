@@ -37,4 +37,3 @@ RSpec.describe Message, type: :model do
     end
   end
 end
-
