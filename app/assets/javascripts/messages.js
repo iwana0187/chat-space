@@ -81,5 +81,4 @@ $(function(){
     });
   };
   setInterval(reloadMessages, 5000);
-  $('html,body').animate({scrollTop: 0}, 500, 'swing');
 });
