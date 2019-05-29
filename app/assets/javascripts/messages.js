@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(message){
-      var image = message.image ? `<img src="${message.image}">` : ``
-      var html = `<ul class="main-block__user-name">
+    var image = message.image ? `<img src="${message.image}">` : ``
+    var html = `<ul class="main-block__user-name">
                     ${message.user_name}
                     <li class="main-block__user-name__time">
                       ${message.created_at}
@@ -13,7 +13,7 @@ $(document).on('turbolinks:load', function() {
                     </p>
                     ${image}
                   </div>`
-      return html;
+    return html;
   }
 
   $('.new_message').on('submit', function(e){
@@ -29,20 +29,19 @@ $(document).on('turbolinks:load', function() {
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
       $(".main").append(html)
       $(".footer__framwork__input-box__form-message").val('')
       $(".footer__framwork__form-submit").prop('disabled', false);
     })
     .fail(function(){
-      alert('失敗しました');
+      alert('失敗しました。');
     })
   })
 
-  // $('document').ready(function(){
-  //   $(".main").animate({scrollTop:$('.footer__framwork')}, 500, 'swing');
-  // })
+  $('document').ready(function(){
+    $(".main").animate({scrollTop:$('.footer__framwork')}, 500, 'swing');
+  })
 
   var reloadMessages = function(message) {
     last_message_id = $("#blog")
@@ -64,8 +63,7 @@ $(document).on('turbolinks:load', function() {
       $('.main').append(insertHTML)
     })
     .fail(function() {
-      console.log('error');
     });
   };
-  // setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 5000);
 });

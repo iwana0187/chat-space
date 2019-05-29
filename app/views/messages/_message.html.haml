@@ -3,7 +3,7 @@
     = message.user.name
     %li.main-block__user-name__time
       =message.created_at.strftime("%Y/%m/%d %H:%M")
-  .main-block__comments#blog{"data-author" => "Taro", "data-create-date" => "2013-04-10"}
+  .main-block__comments#blog{:"data-author" => "Taro", :"data-create-date" => "2013-04-10"}
     - if message.content.present?
       %p
         = message.content
