@@ -1,38 +1,25 @@
-$(function(){
-  $('.footer__framwork__form-submit').on('submit', function(e){
-    e.preventDefault();
-    var formData = new FormData(this)
-  })
-
+$(document).on('turbolinks:load', function() {
   function buildHTML(message){
-    if (message.image.present){
-      var html = `<img src= ${message.image} >`
+      var image = message.image ? `<img src="${message.image}">` : ``
+      var html = `<ul class="main-block__user-name">
+                    ${message.user_name}
+                    <li class="main-block__user-name__time">
+                      ${message.created_at}
+                    </li>
+                  </ul>
+                  <div class="main-block__comments">
+                    <p>
+                      ${message.content}
+                    </p>
+                    ${image}
+                  </div>`
       return html;
-    }
-    else {
-      var html = `<div class="main-block">
-                    <ul class="main-block__user-name">
-                      <%= message.user.name %>
-                      <li class="main-block__user-name__time">
-                        <%= message.created_at.strftime("%Y/%m/%d %H:%M") %>
-                      </li>
-                    </ul>
-                    <div class="main-block__comments">
-                      <% if message.content.present? %>
-                        <p>
-                          ${message.content}
-                        </p>
-                      <%= image_tag message.image.url  if message.image.present? %>`
-      return html;
-    }
   }
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
-
     var url = $(this).attr('action')
-
     $.ajax({
       url: url,
       type: "POST",
@@ -49,7 +36,7 @@ $(function(){
       $(".footer__framwork__form-submit").prop('disabled', false);
     })
     .fail(function(){
-      alert('error');
+      alert('失敗しました');
     })
   })
 
@@ -80,5 +67,5 @@ $(function(){
       console.log('error');
     });
   };
-  setInterval(reloadMessages, 5000);
+  // setInterval(reloadMessages, 5000);
 });
