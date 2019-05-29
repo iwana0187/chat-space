@@ -1,1 +1,1 @@
-
+alias_method
