@@ -11,30 +11,19 @@
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat__group_name chat-group-form__input', placeholder: 'グループ名を入力してください'
   .chat-group-form__field.clearfix
-    %label.chat-group-form__label{:for => "chat_group_チャットメンバーを追加"} チャットメンバーを追加
-  .chat-group-form__field.clearfix
     .chat-group-form__field--left
-
-      %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
-      %input{:name => "chat_group[user_ids][]", :type => "hidden", :value => "22"}/
-    .chat-group-form__field--right.chat-group-form__field--right--box
-      - @group.users.each do |user|
-        #chat-group-user-8.chat-group-user.clearfix.js-chat-member
-          %p.chat-group-user__name
-            = user.name
-          .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn
-            削除
-      %input#user-search-field.chat-group-form__input{:placeholder => "追加したいユーザー名を入力してください", :type => "text"}/
+      %label.chat-group-form__label{for: "chat_group_チャットメンバーを追加"} チャットメンバーを追加
+    .chat-group-form__field--right
+      %input#user-search-field.chat-group-form__input{placeholder: "追加したいユーザー名を入力してください", type: "text"}/
       #user-search-result
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
-      %input{:name => "chat_group[user_ids][]", :type => "hidden", :value => "22"}/
     .chat-group-form__field--right.chat-group-form__field--right--box
       - @group.users.each do |user|
         #chat-group-user-8.chat-group-user.clearfix.js-chat-member
-          %input{:name => "group[user_ids][]", :type => "hidden", :value => "ユーザーのid"}/
+          %input{name: "group[user_ids][]", type: "hidden", value: user.user_ids}/
           %p.chat-group-user__name= user.name
           .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
 
@@ -42,4 +31,6 @@
     .chat-group-form__field--left
     .chat-group-form__field--right
       = f.submit class: 'chat-group-form__action-btn'
+
+
 
