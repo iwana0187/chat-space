@@ -30,6 +30,7 @@ $(function(){
 
   function addUser(user){
     var html =`<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+                <input name="group[user_ids][]" type="hidden" value= "${user.dataset.userId}" >
                 <p class="chat-group-user__name">${user.dataset.userName}</p>
                 <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${user.dataset.userId}" data-user-name="${user.dataset.userName}">削除
                 </div>
@@ -40,6 +41,7 @@ $(function(){
   $(document).on('click',".js-remove-btn", function(){
     appendUser(this)
     $(this).parent().remove()
+  $(this).parent().remove()
   })
 
   function appendErrMsgToHTML(msg){
@@ -48,7 +50,6 @@ $(function(){
 
   $("#user-search-field").on('keyup', function(){
     var input = $("#user-search-field").val();
-    console.log(input)
     $.ajax({
       Type: 'GET',
       url: '/users',
