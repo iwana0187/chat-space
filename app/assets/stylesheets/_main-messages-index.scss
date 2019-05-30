@@ -5,7 +5,7 @@
   height: calc(100vh - 201px);
 }
 
-.main__block {
+.main-block {
   padding: 20px 0;
   &__user-name {
     font-size: 16px;
@@ -19,7 +19,7 @@
     }
   }
   &__comments {
-    margin-top: 10px;
+    margin: 20px 0;
     font-size: 14px;
     font-color: #434A54;
   }
