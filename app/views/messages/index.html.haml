@@ -4,7 +4,7 @@
   .main-contents
     .main-contents__header
       .main-contents__header__block
-        %p.main-contents__header__block__group-name
+        %p.main-contents__header__block__group-name{"data-group_id": @group.id}
           = @group.name
         %ul.main-contents__header__block__member
           Member:
@@ -16,15 +16,15 @@
         .main-contents__header__block__edit-group
           = link_to edit_group_path(@group.id) do
             Edit
-      .main
-        = render partial: 'message', collection: @messages
+    .main
+      = render partial: 'message', collection: @messages
+  .footer
+    = form_for [@group, @message],html:{ class:"new_message" } do |f|
+      .footer__framwork
+        .footer__framwork__input-box
+          = f.text_field :content,class: 'footer__framwork__input-box__form-message', placeholder: 'type a message'
+          = f.label :image, class: 'footer__framwork__input-box__image-label--my-black' do
+            = fa_icon 'image'
+            = f.file_field :image, class:'footer__framwork__input-box__image-label__input'
+        = f.submit value: 'Send', class: 'footer__framwork__form-submit'
 
-    .footer
-      = form_for [@group, @message] do |f|
-        .footer__framwork
-          .footer__framwork__input-box
-            = f.text_field :content,class: 'footer__framwork__input-box__form-message', placeholder: 'type a message'
-            = f.label :image, class: 'footer__framwork__input-box__image-label--my-black' do
-              = fa_icon 'image'
-              = f.file_field :image, class:'footer__framwork__input-box__image-label__input'
-          = f.submit value: 'Send', class: 'footer__framwork__form-submit'
