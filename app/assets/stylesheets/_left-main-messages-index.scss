@@ -2,6 +2,7 @@
   background-color: #2f3251;
   height: calc(100vh - 126px);
   width: 300px;
+  overflow: scroll;
   &__group-name {
     color: #fff;
     font-size: 15px;
