@@ -41,25 +41,22 @@ $(function(){
   $(document).on('click',".js-remove-btn", function(){
     appendUser(this)
     $(this).parent().remove()
-  $(this).parent().remove()
   })
 
   function appendErrMsgToHTML(msg){
     var html = `<p class="chat-group-user">${msg}</p>`
   }
 
-  $("#user-search-field").on('keyup', function(){
-    var input = $("#user-search-field").val();
+  $("#user-search-field").on('input', function(){
+    var input = $("#user-search-field").val()
     $.ajax({
       Type: 'GET',
       url: '/users',
       data: { keyword: input },
-      dataType: 'json',
-      processData: false,
-      contentType: false
+      dataType: 'json'
     })
-
     .done(function(users){
+      $(" #user-search-field").empty();
       $(" #user-search-result").empty();
       if(users.length !== 0){
         users.forEach(function(user){
@@ -67,10 +64,9 @@ $(function(){
         });
       }
       else {
-        appendErrMsgToHTML("一致するユーザーが存在しません。");
+      appendErrMsgToHTML("一致するユーザーが存在しません。");
       }
     })
-
     .fail(function() {
       alert('ユーザー検索に失敗しました。');
     })
